@@ -1,0 +1,139 @@
+@import 'var';
+@import 'QuoteBox';
+body{
+    font-family: 'IBM Plex Serif', serif;
+}
+main{
+    height: 100%;
+    padding : 4rem 15vmax;
+    background-color: azure;
+
+    @include MQ(900px){
+        padding : 4rem 15vmin;
+    }
+
+    // @include MQ(657px){
+    //     padding : 4rem 2rem;
+    // }
+    
+}
+
+.title{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: $accent-color;
+    @include MQ(657px){
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+    }
+
+}
+
+.action{
+    @include box;
+    
+    margin-bottom: 2rem;
+    padding: 2rem;;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    @include MQ(547px){
+        grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    }
+    
+    gap: 1rem;
+
+    &__form{
+        grid-column: 1;
+        grid-row: 1;
+        width:100%;
+       // height: 100%;
+       //border: 1px solid $accent-color;
+        padding: 0;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 0px $accent-color;
+       display: flex;
+   
+    }
+    &__search-field{
+        
+        font-family: inherit;
+        font-size: .8rem;
+       width: 100%;
+        height: 100%;
+        padding: 0 1em;
+        border : none;
+        border-radius: 5px;
+        flex: 5;
+
+    }
+
+    &__search-btn{
+        
+        display: inline-block;
+        flex: 1;
+     
+     
+        font-size: 1.3em;
+        color: $accent-color;
+        padding: 0em .2em;
+        cursor: pointer;
+        border-color: white;
+        border-radius: 5px;
+        box-shadow: -1px 0px  2px -1px $accent-color;
+        background-color: white;
+        
+    }
+    & .btn{
+        font-family: inherit;
+        font-size: 1rem;
+        padding: .8em 1.6em;
+        border-radius: 5px;
+        background-color: $accent-color;
+        border-color: $accent-color;
+        color: white;
+        &:hover{
+            background-color:  rgb(173, 237, 253);
+            color: $accent-color;
+            border-color:  $accent-color;
+            
+        }
+
+        @include MQ(733px){
+            font-size: .9rem;
+        }
+
+        
+    }
+
+    
+
+    &__new-quote-btn{
+        grid-column: 1/-1;
+        grid-row: -2;
+        height: 100%;
+
+    }
+    
+}
+
+.example-enter {
+    opacity: 0.01;
+  }
+  
+  .example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+  }
+  
+  .example-leave {
+    opacity: 1;
+  }
+  
+  .example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in-out;
+  }

@@ -1,0 +1,135 @@
+@import 'var';
+.quote-box{
+ 
+        @include box;
+    
+        transition: all 1000ms ease-in-out;
+    &__text{
+        
+        text-align: center;
+        letter-spacing: 1.2px;
+        
+        & strong::before{
+            content: open-quote;
+            color: $accent-color;
+            display: inline-block;
+            font-size: inherit;
+            margin-right: .2rem;
+        }
+
+        & strong::after{
+            content: close-quote;
+            color: $accent-color;
+            display: inline-block;
+            font-size: 1.5em;
+            margin-left: .2rem;
+        }
+    }
+
+    &__author{
+        text-align: right;
+        font-size: .7em;
+        font-weight: bold;
+        display: block;
+        margin-right: 2.5em;
+        margin-bottom: 2em;
+    }
+
+    &__social{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 2em;
+
+        &__like{
+            font-size: inherit;
+            display: inline-block;
+            position: relative;
+            color: $accent-color;
+            cursor: pointer;
+            
+        //  transition: all 1000ms ease-in-out;
+            &::before{
+                content: 'Like';
+                text-align: center;
+                font-size: .8rem;
+                
+                color: white;
+                padding: .5em .25em;
+                border-radius: 5px;
+               display: block;
+                position: absolute;
+                width: 8em;
+                top:-40%;
+                right : -50%;
+                z-index: -1;
+                transition: all 800ms ease-in-out;
+               background: transparent;
+            }
+            & i{
+                transition: all 400ms ease-in-out;
+            }
+            & i:hover{
+               color: rgb(173, 237, 253);
+               text-shadow: 1px 1px 1px $accent-color;
+   
+            }
+            &:hover::before{
+                color:rgb(92, 123, 149);
+              background : rgba(173, 237, 253, 0.301);
+               z-index: 100;
+            }
+
+            &--liked {
+                color: red;
+            }
+            
+           
+        }
+
+        &__twitter{
+            font-size: inherit;
+             display: inline-block;
+             position: relative;
+             color: $accent-color;
+            
+         //  transition: all 1000ms ease-in-out;
+             &::before{
+                 content: attr(contenttext);
+                 text-align: center;
+                 font-size: .8rem;
+                 
+                 color:white;
+                 padding: .5em .25em;
+                 border-radius: 5px;
+                display: block;
+                 position: absolute;
+                 width: 8em;
+                 top:-40%;
+                 left : -50%;
+                 z-index: -1;
+                 transition: all 800ms ease-in-out;
+                background: transparent;
+             }
+             & i{
+                transition: all 400ms ease-in-out;
+             }
+             & i:hover{
+                color: rgb(173, 237, 253);
+                text-shadow: 1px 1px 1px $accent-color;
+    
+             }
+             &:hover::before{
+                color:rgb(92, 123, 149);
+                background : rgba(173, 237, 253, 0.301);
+                 z-index: 100;
+             }
+        }
+    
+        
+    }
+
+    
+   
+    
+}

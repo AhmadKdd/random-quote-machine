@@ -1,0 +1,23 @@
+$accent-color: #6b9190;
+
+
+@mixin box {
+    width: 100%;
+        height: fit-content;
+        padding: 2em;
+        font-size: 1.5rem;
+       margin-bottom: 2rem;
+        border: 2px solid $accent-color;
+        background: white;
+        border-radius: 10px;
+        transition: all ease-in-out 300ms;
+    @include MQ(657px){
+        font-size: .9rem;
+}
+}
+@mixin MQ($arg){
+    @media screen and (max-width: $arg){
+        @content;
+    }
+    
+}

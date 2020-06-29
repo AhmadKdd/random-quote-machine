@@ -1,0 +1,153 @@
+.quote-box {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 2em;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  border: 2px solid #6b9190;
+  background: white;
+  border-radius: 10px;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+  opacity: 0;
+  -webkit-transition: all 1000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
+}
+
+@media screen and (max-width: 657px) {
+  .quote-box {
+    font-size: .9rem;
+  }
+}
+
+.quote-box__text {
+  text-align: center;
+  letter-spacing: 1.2px;
+}
+
+.quote-box__text strong::before {
+  content: open-quote;
+  color: #6b9190;
+  display: inline-block;
+  font-size: inherit;
+  margin-right: .2rem;
+}
+
+.quote-box__text strong::after {
+  content: close-quote;
+  color: #6b9190;
+  display: inline-block;
+  font-size: 1.5em;
+  margin-left: .2rem;
+}
+
+.quote-box__author {
+  text-align: right;
+  font-size: .7em;
+  font-weight: bold;
+  display: block;
+  margin-right: 2.5em;
+  margin-bottom: 2em;
+}
+
+.quote-box__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 2em;
+}
+
+.quote-box__social__like {
+  font-size: inherit;
+  display: inline-block;
+  position: relative;
+  color: #6b9190;
+  cursor: pointer;
+}
+
+.quote-box__social__like::before {
+  content: 'Like';
+  text-align: center;
+  font-size: .8rem;
+  color: white;
+  padding: .5em .25em;
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  width: 8em;
+  top: -40%;
+  right: -50%;
+  z-index: -1;
+  -webkit-transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
+  background: transparent;
+}
+
+.quote-box__social__like i {
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.quote-box__social__like i:hover {
+  color: #adedfd;
+  text-shadow: 1px 1px 1px #6b9190;
+}
+
+.quote-box__social__like:hover::before {
+  color: #5c7b95;
+  background: rgba(173, 237, 253, 0.301);
+  z-index: 100;
+}
+
+.quote-box__social__like--liked {
+  color: red;
+}
+
+.quote-box__social__twitter {
+  font-size: inherit;
+  display: inline-block;
+  position: relative;
+  color: #6b9190;
+}
+
+.quote-box__social__twitter::before {
+  content: attr(contenttext);
+  text-align: center;
+  font-size: .8rem;
+  color: white;
+  padding: .5em .25em;
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  width: 8em;
+  top: -40%;
+  left: -50%;
+  z-index: -1;
+  -webkit-transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
+  background: transparent;
+}
+
+.quote-box__social__twitter i {
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.quote-box__social__twitter i:hover {
+  color: #adedfd;
+  text-shadow: 1px 1px 1px #6b9190;
+}
+
+.quote-box__social__twitter:hover::before {
+  color: #5c7b95;
+  background: rgba(173, 237, 253, 0.301);
+  z-index: 100;
+}
+/*# sourceMappingURL=QuoteBox.css.map */
